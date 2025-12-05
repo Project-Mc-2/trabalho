@@ -1,22 +1,22 @@
-# **Projeto Blog Glorious – Projeto de Avaliações de Maquiagem**
+# **Projeto Blog Glorious 💋 – Projeto de Avaliações de Maquiagem**
 
-# O repositório junta todas as etapas, códigos e documentações produzidas durante o desenvolvimento do sistema de avaliações de maquiagem. O projeto foi desenvolvido com os conhecimentos adquiridos entre as disciplinas ensinadas do 2º semestre do Curso técnico de Desenvolvimento de Sistemas - SENAI Gaspar Ricardo Junior.
+**O repositório junta todas as etapas, códigos e documentações produzidas durante o desenvolvimento do sistema de avaliações de maquiagem. O projeto foi desenvolvido com os conhecimentos adquiridos entre as disciplinas ensinadas do 2º semestre do Curso técnico de Desenvolvimento de Sistemas - SENAI Gaspar Ricardo Junior.** 
 
-# Professor e Instrutor: 
+# 👨‍🏫 Professor e Instrutor: 
 **Vedilson Prado**
 
-# Desenvolvedores:
-Dev 01: Maria Eduarda Norbutas (https://www.linkedin.com/in/maria-norbutas-831ba7368/)
-Dev 02: Miriã Lopes Ferraz (https://www.linkedin.com/in/miri%C3%A3-lopes-ferraz-370035369/)
-Dev 03: Pietra Padilha de Siqueira Gurgel (https://www.linkedin.com/in/pietra-gurgel-130495358/)
-Dev 04: Valentina Senger Spinelli (https://www.linkedin.com/in/valentina-senger-spinelli-53802b325/)
+# 🧑‍💻 Desenvolvedores:
+**Dev 01:** Maria Eduarda Norbutas (https://www.linkedin.com/in/maria-norbutas-831ba7368/) <br>
+**Dev 02:** Miriã Lopes Ferraz (https://www.linkedin.com/in/miri%C3%A3-lopes-ferraz-370035369/) <br>
+**Dev 03:** Pietra Padilha de Siqueira Gurgel (https://www.linkedin.com/in/pietra-gurgel-130495358/) <br>
+**Dev 04:** Valentina Senger Spinelli (https://www.linkedin.com/in/valentina-senger-spinelli-53802b325/) <br>
 
-# Ferramentas 
-**BackEnd:** (Java).
-**FrontEnd:** (JavaScript), (HTML), (CSS).
+# 🖥️ Ferramentas 
+**BackEnd:** (Java). <br>
+**FrontEnd:** (JavaScript), (HTML), (CSS). <br>
 
 # Tabela de EndPoints
-**Posts**
+**✉️ Posts**
 | Método | Endpoint | Descrição |
 |--------|----------|-----------|
 | GET    | `/posts` | Lista todos os posts |
@@ -25,7 +25,7 @@ Dev 04: Valentina Senger Spinelli (https://www.linkedin.com/in/valentina-senger-
 | PUT    | `/posts/{id}` | Atualiza um post existente |
 | DELETE | `/posts/{id}` | Exclui um post |
 
-**Avaliações (Reviews)**
+**⭐ Avaliações (Reviews)**
 | Método | Endpoint | Descrição |
 |--------|----------|-----------|
 | GET    | `/posts/{id}/reviews` | Lista todas as avaliações de um post |
@@ -42,6 +42,6 @@ Dev 04: Valentina Senger Spinelli (https://www.linkedin.com/in/valentina-senger-
 # Como rodar localmente
 
 
-# Acesse nosso trello!
+# 🗣️ Acesse nosso trello!
 **Link**: https://trello.com/b/4Dlu2C58/project-mc
 
