@@ -1,13 +1,13 @@
-package com.senai.projeto_mc;
+package com.senai.maquiagem.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjetoMcApplication {
+public class ProjetoSenaiMaquiagemApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjetoMcApplication.class, args);
+		SpringApplication.run(ProjetoSenaiMaquiagemApplication.class, args);
 	}
 
 }
