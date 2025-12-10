@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cadastro Produto</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <header class="barra-topo">
+        <div class="logo"><a href="../index.html">Glorious</a></div>
+        <a href="produto.html" class="btn-voltar" style="color:#fff;">Voltar para a Lista</a>
+    </header>
+
+    <main class="conteudo-form">
+        <div class="container-formulario">
+            <h2 id="nomeProduto">Novo Produto</h2>
+
+            <form id="formCadastro">
+                <label>Produto</label>
+                <input type="text" id="Produto" required>
+
+                <label>Categoria</label>
+                <select id="selectCategoria" required>
+                </select>
+
+                <div style="display: flex; gap: 10px;">
+                    <div style="flex:1">
+                        <label>Ano</label> <input type="number" id="anoLancamento">
+                    </div>
+                    <div style="flex:1">
+                        <label>Marca</label> <input type="text" id="Marca">
+                    </div>
+                </div>
+
+                <label>URL da Capa</label>
+                <input type="text" id="urlCapa">
+
+                <div class="linha-acoes">
+                    <button type="submit" id="btnSalvar" class="btn primario">Salvar Produto</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../script/cadastro-filme.js"></script>
+    <!-- js cadastro produto -->
+
+</body>
+
+</html>
