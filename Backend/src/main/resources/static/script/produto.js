@@ -20,40 +20,40 @@ nota.textContent = produto.notaMedia.toFixed(1);
 
 // Renderizar avaliações
 function renderAvaliacoes() {
-listaAvaliacoes.innerHTML = "";
-produto.avaliacoes.forEach(av => {
-const li = document.createElement("li");
-li.innerHTML = `
+	listaAvaliacoes.innerHTML = "";
+	produto.avaliacoes.forEach(av => {
+		const li = document.createElement("li");
+		li.innerHTML = `
 <strong>${av.usuario}</strong> – ⭐ ${av.nota}<br>
 <span>${av.comentario}</span>
 `;
-listaAvaliacoes.appendChild(li);
-});
+		listaAvaliacoes.appendChild(li);
+	});
 }
 
 // Adicionar avaliação
 formAvaliacao.addEventListener("submit", (e) => {
-e.preventDefault();
+	e.preventDefault();
 
-const nota = Number(document.getElementById("nota").value);
-const comentario = document.getElementById("comentario").value.trim();
-const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+	const nota = Number(document.getElementById("nota").value);
+	const comentario = document.getElementById("comentario").value.trim();
+	const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
 
-const novaAvaliacao = {
-usuario: usuario.nome,
-nota,
-comentario
-};
+	const novaAvaliacao = {
+		usuario: usuario.nome,
+		nota,
+		comentario
+	};
 
-produto.avaliacoes.push(novaAvaliacao);
+	produto.avaliacoes.push(novaAvaliacao);
 
-produto.notaMedia =
-produto.avaliacoes.reduce((acc, a) => acc + a.nota, 0) /
-produto.avaliacoes.length;
+	produto.notaMedia =
+		produto.avaliacoes.reduce((acc, a) => acc + a.nota, 0) /
+		produto.avaliacoes.length;
 
-localStorage.setItem("produtos", JSON.stringify(produtos));
+	localStorage.setItem("produtos", JSON.stringify(produtos));
 
-renderAvaliacoes();
+	renderAvaliacoes();
 });
 
 renderAvaliacoes();
