@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdf6ec;
+    color: #4b3f2f;
+    line-height: 1.6;
+
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6b4f3c;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.oi {
+    font-family: "Licorice", cursive;
+    color: #f7e7c6;
+    font-size: 30px;
+    transition: opacity .3s ease;
+    text-decoration: none;
+}
+
+.btn {
+    padding: 12px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #d4a373;
+    color: #4b3f2f;
+    transition: all .3s ease;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn:hover {
+    background-color: #b5835a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+@media (max-width: 600px) {
+    .barra-topo {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .logo a {
+        font-size: 48px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .logo a {
+        font-size: 56px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .logo a {
+        font-size: 64px;
+    }
+}

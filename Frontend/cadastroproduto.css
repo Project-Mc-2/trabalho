@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #fdf6ec;
+    color: #4b3f2f;
+    line-height: 1.6;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6b4f3c;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.barra .logo a {
+    font-family: 'Licorice', cursive;
+    color: #f7e7c6;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.btn-voltar {
+    background-color: #d4a373;
+    color: #4b3f2f;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #b5835a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.conteudo{
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #f7e7c6;
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 6px 12px rgba(75,63,47,0.15);
+}
+
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1.5px solid #b3a38e;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+form input,
+form select {
+    outline: none;
+    border-color: #d4a373;
+    box-shadow: 0 0 5px rgba(212,163,115,0.5);
+}
+
+
+.btn {
+    background-color: #d4a373;
+    color: #4b3f2f;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b5835a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 600px) {
+    .barra-topo {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .logo a {
+        font-size: 48px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .logo a {
+        font-size: 56px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .logo a {
+        font-size: 64px;
+    }
+}
