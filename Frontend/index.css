@@ -24,7 +24,7 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(70%);
+    filter: brightness(50%);
 }
 
 header {
@@ -37,8 +37,8 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: rgba(94, 81, 75, 0.25);
-    backdrop-filter: blur(8px);
+    background: rgba(162, 151, 141, 0.25);
+    backdrop-filter: blur(18px);
 }
 
 .login {
@@ -68,13 +68,13 @@ section {
 #inicio h1 {
     font-family: 'Licorice', cursive;
     font-size: clamp(60px, 10vw, 90px);
-    text-shadow: 0 0 5px rgba(75, 54, 13, 0.8);
+    text-shadow: 0 0 5px rgba(157, 132, 132, 0.8);
 }
 
 #inicio p {
     font-size: clamp(1.1rem, 2.5vw, 1.6rem);
     max-width: 700px;
-    text-shadow: 0 0 5px rgba(35, 18, 87, 0.6);
+    text-shadow: 0 0 5px rgba(87, 61, 18, 0.6);
 }
 
 #categorias {
