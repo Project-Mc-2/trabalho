@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.oi {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.oi img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+header {
+    width: 100%;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(162, 151, 141, 0.25);
+    backdrop-filter: blur(18px);
+}
+
+
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 130px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+#inicio h1 {
+    font-family: 'Licorice', cursive;
+    font-size: clamp(60px, 10vw, 90px);
+    text-shadow: 0 0 5px rgba(157, 132, 132, 0.8);
+}
+
+#inicio p {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    max-width: 700px;
+    text-shadow: 0 0 5px rgba(87, 61, 18, 0.6);
+}
+
+#categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: #211f28;
+    text-decoration: none;
+    width: clamp(160px, 40vw, 260px);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    backdrop-filter: blur(6px);
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 38px;
+        height: 38px;
+    }
+
+    .card {
+        width: 180px;
+        height: 95px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    .card {
+        width: 150px;
+        height: 90px;
+        font-size: .95rem;
+    }
+}
