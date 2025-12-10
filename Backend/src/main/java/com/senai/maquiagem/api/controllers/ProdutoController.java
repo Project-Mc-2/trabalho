@@ -7,7 +7,7 @@ import com.senai.maquiagem.api.entities.Produto;
 import com.senai.maquiagem.api.services.ProdutoService;
 
 @RestController
-@RequestMapping("/api/filmes")
+@RequestMapping("/api/produtos")
 @CrossOrigin(origins = "*")
 public class ProdutoController {
 
