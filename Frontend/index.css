@@ -37,7 +37,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(94, 81, 75, 0.25);
     backdrop-filter: blur(8px);
 }
 
@@ -51,7 +51,7 @@ header {
 
 .login:hover {
     transform: scale(1.15);
-    filter: drop-shadow(0 0 8px #fff);
+    filter: drop-shadow(0 0 8px #ffffff);
 }
 
 section {
@@ -68,7 +68,7 @@ section {
 #inicio h1 {
     font-family: 'Licorice', cursive;
     font-size: clamp(60px, 10vw, 90px);
-    text-shadow: 0 0 5px rgba(32, 24, 114, 0.8);
+    text-shadow: 0 0 5px rgba(75, 54, 13, 0.8);
 }
 
 #inicio p {
