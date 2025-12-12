@@ -1,59 +1,59 @@
-// Pegar ID do produto selecionado
-const produtoID = localStorage.getItem("produtoSelecionado");
-const produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+const API_URL = "http://localhost:8080/api/produtos";
+const CAT_URL = "http://localhost:8080/api/categorias";
 
-const produto = produtos.find(p => p.id == produtoID);
+document.addEventListener("DOMContentLoaded", listarProduto);
 
-// Elementos
-const titulo = document.getElementById("titulo-produto");
-const foto = document.getElementById("foto-produto");
-const marca = document.getElementById("marca-produto");
-const nota = document.getElementById("nota-produto");
-const listaAvaliacoes = document.getElementById("lista-avaliacoes");
-const formAvaliacao = document.getElementById("form-avaliacao");
+function listarProduto() {
+    fetch(API_URL)
+        .then(res => res.json())
+        .then(produto => {
+            const lista = document.getElementById("listaProduto");
+            lista.innerHTML = "";
 
-// Carregar informações
-titulo.textContent = produto.nome;
-foto.src = produto.foto;
-marca.textContent = produto.marca;
-nota.textContent = produto.notaMedia.toFixed(1);
+            const paramsUrl = new URLSearchParams(window.location.search);
+            const idCategoria = paramsUrl.get("idCategoria");
 
-// Renderizar avaliações
-function renderAvaliacoes() {
-	listaAvaliacoes.innerHTML = "";
-	produto.avaliacoes.forEach(av => {
-		const li = document.createElement("li");
-		li.innerHTML = `
-<strong>${av.usuario}</strong> – ⭐ ${av.nota}<br>
-<span>${av.comentario}</span>
-`;
-		listaAvaliacoes.appendChild(li);
-	});
+            if (idCategoria) {
+                produto = produto.filter(f => f.categoria && f.categoria.id == idCategoria);
+            }
+
+            if (produto.length === 0) {
+                lista.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #666;">
+                    Nenhum produto encontrado.
+                </p>`;
+                return;
+            }
+
+            let html = "";
+            produto.forEach(f => {
+                html += `
+                  <div class="produto-card">
+
+                    <div class="acoes-produto">
+                        <button class="btn-editar" onclick="editarProduto(${f.id})">✏️</button>
+                        <button class="btn-excluir" onclick="excluirProduto(${f.id})">🗑️</button>
+                    </div>
+
+                    <img src="${f.urlCapa}" alt="${f.nomeProduto}" 
+                         onerror="this.src='https://via.placeholder.com/300x450?text=Sem+Capa'">
+
+                    <strong>${f.nomeProduto}</strong><br>
+                    <em>${f.categoria ? f.categoria.nome : "Sem Categoria"}</em><br>
+                    (${f.anoLancamento || ""}) - ${f.marca || ""}
+                  </div>
+                `;
+            });
+
+            lista.innerHTML = html;
+        });
 }
 
-// Adicionar avaliação
-formAvaliacao.addEventListener("submit", (e) => {
-	e.preventDefault();
+function editarProduto(id) {
+    window.location.href = `cadastroProduto.html?id=${id}`;
+}
 
-	const nota = Number(document.getElementById("nota").value);
-	const comentario = document.getElementById("comentario").value.trim();
-	const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
-
-	const novaAvaliacao = {
-		usuario: usuario.nome,
-		nota,
-		comentario
-	};
-
-	produto.avaliacoes.push(novaAvaliacao);
-
-	produto.notaMedia =
-		produto.avaliacoes.reduce((acc, a) => acc + a.nota, 0) /
-		produto.avaliacoes.length;
-
-	localStorage.setItem("produtos", JSON.stringify(produtos));
-
-	renderAvaliacoes();
-});
-
-renderAvaliacoes();
+function excluirProduto(id) {
+    fetch(`${API_URL}/${id}`, { method: "DELETE" })
+        .then(() => listarProduto())
+        .catch(err => alert("Erro ao excluir"));
+}

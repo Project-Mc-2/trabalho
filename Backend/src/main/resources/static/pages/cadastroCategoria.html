@@ -1,33 +1,25 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
-	<meta charset="utf-8">
-	<title>Novo Gênero</title>
-	<link rel="stylesheet" href="">
+    <meta charset="utf-8">
+    <title>Novo Gênero</title>
+    <link rel="stylesheet" href="../css/cadastrogenero.css"> 
 </head>
-
 <body>
-	<header class="barra-topo">
-		<div class="logo"><a href="../index.html">Glorious</a></div>
-		<a href="categoria.html" style="color: #ccc; font-size: 0.9rem;">Voltar</a>
-	</header>
+    
 
-	<div class="conteudo-form">
-		<div class="container-formulario">
-			<h2>Nova Categoria</h2>
-			<form id="formCategoria">
-				<label>Nome da Categoria</label>
-				<input type="text" id="nomeCategoria" required placeholder="Ex: Batom, Blush ...">
+    <div class="conteudo-form">
+        <div class="container-formulario">
+            <h2>Nova Categoria</h2>
+            <form id="formCategoria">
+                <label>Nome da Categoria</label>
+                <input type="text" id="nomeCategoria" required placeholder="Ex: Batom, Blush ...">
+                
+                <button type="submit" class="btn primario">Salvar</button>
+            </form>
+        </div>
+    </div>
 
-				<button type="submit" class="btn primario">Salvar</button>
-			</form>
-		</div>
-	</div>
-
-	<script src="../script/cadastro-genero.js"></script>
-	<!-- js cadastro categoria -->
-
+    <script src="../script/cadastroCategoria.js"></script>
 </body>
-
 </html>
