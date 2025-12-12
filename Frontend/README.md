@@ -12,7 +12,7 @@
 **Dev 04:** Valentina Senger Spinelli (https://www.linkedin.com/in/valentina-senger-spinelli-53802b325/) <br>
 
 # 🖥️ Ferramentas 
-**BackEnd:** (Java). <br>
+**BackEnd:** (Java), (MySQL). <br>
 **FrontEnd:** (JavaScript), (HTML), (CSS). <br>
 
 # Tabela de EndPoints
@@ -20,7 +20,6 @@
 | Método | Endpoint | Descrição |
 |--------|----------|-----------|
 | GET    | `/posts` | Lista todos os posts |
-| GET    | `/posts/{id}` | Retorna detalhes de um post específico |
 | POST   | `/posts` | Cria um novo post |
 | PUT    | `/posts/{id}` | Atualiza um post existente |
 | DELETE | `/posts/{id}` | Exclui um post |

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
 
 *{
     margin: 0;
@@ -7,116 +7,78 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: "Raleway", sans-serif;
-    color: #ffffff;
-    overflow-x: hidden;
+body {
+    background-color: #2c1e1a;
+    overflow: hidden;
 }
 
-.oi {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
+.fotos {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
 }
 
-.oi img {
+.imagem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(50%);
 }
 
-header {
-    width: 100%;
-    padding: 15px 40px;
-    position: fixed;
+.fotoescura {
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 5;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background: rgba(162, 151, 141, 0.25);
-    backdrop-filter: blur(18px);
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
 }
 
-
-
-section {
-    width: 100%;
-    min-height: 100vh;
-    padding: 130px 20px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 2;
+    color: white;
 }
 
-#inicio h1 {
-    font-family: 'Licorice', cursive;
-    font-size: clamp(60px, 10vw, 90px);
-    text-shadow: 0 0 5px rgba(157, 132, 132, 0.8);
+#glorious {
+    font-size: 80px;
+    font-family: "Birthstone Bounce", cursive;
+    text-shadow: 0px 0px 15px black;
 }
 
-#inicio p {
-    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-    max-width: 700px;
-    text-shadow: 0 0 5px rgba(87, 61, 18, 0.6);
+.descricao {
+    margin-top: 10px;
+    font-family: "Raleway", sans-serif;
+     margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-#categorias {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    width: 100%;
+.botoes {
+    margin-top: 25px;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.45);
-    border-radius: 20px;
-    font-size: 1.2rem;
-    color: #211f28;
+.botao {
+    display: inline-block;
+    padding: 14px 32px;
+    margin: 10px;
+    background-color: #5A3E32;
+    color: #e6cdbb;
     text-decoration: none;
-    width: clamp(160px, 40vw, 260px);
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    transition: 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
 
-.card:hover {
-    background: rgba(255, 255, 255, 0.35);
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.4);
-}
-
-@media (max-width: 768px) {
-    .login {
-        width: 38px;
-        height: 38px;
-    }
-
-    .card {
-        width: 180px;
-        height: 95px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 12px 20px;
-    }
-
-    .card {
-        width: 150px;
-        height: 90px;
-        font-size: .95rem;
-    }
+.botao:hover {
+    background-color: #7b5647;
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.35);
 }

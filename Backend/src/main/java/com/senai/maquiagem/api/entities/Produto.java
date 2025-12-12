@@ -27,6 +27,10 @@ import jakarta.validation.constraints.NotBlank;
 		private Integer anoLancamento;
 
 		private String marca;
+		
+		@NotBlank(message = "Sua opinião sobre o produto é obrigatório")
+		@Column(nullable = false)
+		private String opiniao;
 
 		@Column(name = "url_capa") 
 		private String urlCapa;
@@ -38,17 +42,26 @@ import jakarta.validation.constraints.NotBlank;
 		public Produto() {
 		}
 
-		public Produto(Long id, String nomeProduto, Integer anoLancamento, String marca, String urlCapa, Categoria categoria) {
+		public Produto(Long id, String nomeProduto, Integer anoLancamento, String marca, String opiniao, String urlCapa, Categoria categoria) {
 			this.id = id;
 			this.nomeProduto = nomeProduto;
 			this.anoLancamento = anoLancamento;
 			this.marca = marca;
+			this.opiniao = opiniao;
 			this.urlCapa = urlCapa;
 			this.categoria = categoria;
 		}
 
 		public Long getId() {
 			return id;
+		}
+
+		public String getOpiniao() {
+			return opiniao;
+		}
+
+		public void setOpiniao(String opiniao) {
+			this.opiniao = opiniao;
 		}
 
 		public void setId(Long id) {

@@ -32,6 +32,7 @@ public class ProdutoService {
 		f.setNomeProduto(dados.getNomeProduto());
 		f.setAnoLancamento(dados.getAnoLancamento());
 		f.setMarca(dados.getMarca());
+		f.setOpiniao(dados.getOpiniao());
 		f.setUrlCapa(dados.getUrlCapa());
 		f.setCategoria(dados.getCategoria());
 

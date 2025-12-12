@@ -1,32 +1,33 @@
-const listaCategorias = document.getElementById("lista-categorias");
-const listaFiltrada = document.getElementById("produtos-filtrados");
+const CAT_URL = "http://localhost:8080/api/categorias";
 
-const produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+document.addEventListener("DOMContentLoaded", listarCategorias);
 
-const categorias = [...new Set(produtos.map(p => p.categoria))];
+function listarCategorias() {
+    fetch(CAT_URL)
+        .then(res => res.json())
+        .then(categorias => {
 
-categorias.forEach(cat => {
-	const li = document.createElement("li");
-	li.textContent = cat;
-	li.onclick = () => filtrar(cat);
-	listaCategorias.appendChild(li);
-});
+            const grid = document.getElementById("listaCategoria");
+            grid.innerHTML = "";
 
-function filtrar(cat) {
-	listaFiltrada.innerHTML = "";
+            if (categorias.length === 0) {
+                grid.innerHTML = `
+                    <p style="grid-column:1/-1; text-align:center; color:#ccc;">
+                        Nenhuma categoria cadastrada.
+                    </p>`;
+                return;
+            }
 
-	const filtrados = produtos.filter(p => p.categoria === cat);
+            categorias.forEach(c => {
+                grid.innerHTML += `
+                    <div class="cardCategoria" onclick="abrirProdutos(${c.id})">
+                        ${c.nome}
+                    </div>
+                `;
+            });
+        });
+}
 
-	filtrados.forEach(prod => {
-		const div = document.createElement("div");
-		div.classList.add("produto-cat");
-
-		div.innerHTML = `
-<img src="${prod.foto}">
-<h3>${prod.nome}</h3>
-<p>⭐ ${prod.notaMedia.toFixed(1)}</p>
-`;
-
-		listaFiltrada.appendChild(div);
-	});
+function abrirProdutos(id) {
+    window.location.href = `produto.html?idCategoria=${id}`;
 }

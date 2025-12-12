@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif; 
+    background-color: #fdf6ec; 
+    color: #4b3f2f; 
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6b4f3c; 
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo a {
+    font-family: 'Licorice', cursive;
+    color: #f7e7c6; 
+    font-size: 30px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    background-color: #d4a373; 
+    color: #4b3f2f;
+}
+
+.btn:hover {
+    background-color: #b5835a; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.conteudo h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #4b3f2f;
+    font-size: 20px;
+    margin: 30px auto; 
+    background-color: rgb(235, 214, 191);
+    border-radius: 20px;
+    padding: 10px 20px;
+    max-width: 400px; 
+    border: 2px solid #b3a38e; 
+}
+
+
+@media (max-width: 768px) {
+    .barra-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-central {
+        margin: 10px 0;
+    }
+}
+
+#listaCategoria {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #635348;
+    border-radius: 12px;
+    background-color: #b5a092;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+   
+}
+

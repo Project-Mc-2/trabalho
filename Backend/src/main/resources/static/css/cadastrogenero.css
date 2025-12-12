@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #fdf6ec;
+    color: #4b3f2f;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+.barra-topo {
+    display: flex;
+    align-items: center;
+    background-color: #6b4f3c;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.barra-topo a {
+    color: #f7e7c6;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.barra-topo a:hover {
+    color: #d4a373;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; 
+    padding: 20px;
+}
+
+.form {
+    background-color: #f7e7c6;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(75,63,47,0.2);
+    width: 100%;
+    max-width: 450px;
+}
+
+.form h2 {
+    font-family: 'Licorice', cursive;
+    font-weight: 300;
+    color: #6b4f3c;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #d4a373;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    border-color: #b5835a;
+    box-shadow: 0 0 5px rgba(181,131,90,0.5);
+}
+
+.botao {
+    width: 100%;
+    padding: 12px;
+    background-color: #d4a373;
+    color: #4b3f2f;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #b5835a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(75,63,47,0.2);
+}
+
+@media (max-width: 500px) {
+}
