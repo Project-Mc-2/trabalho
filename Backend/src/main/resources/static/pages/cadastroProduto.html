@@ -15,27 +15,30 @@
 
     <main class="conteudo">
         <div class="container">
-            <h2 id="nomeProduto">Novo Produto</h2>
+            <h2 id="nomeProdutoTitulo">Novo Produto</h2>
             
             <form id="formCadastro">
                 <label>Produto</label> 
-                <input type="text" id="produto" required>
+                <input type="text" id="nomeProduto" required>
                 
                 <label>Categoria</label>
                 <select id="selectCategoria" required>
+                    <option value="">Selecione uma categoria</option>
                 </select>
 
                 <div style="display: flex; gap: 10px;">
                     <div style="flex:1">
-                        <label>Ano</label> <input type="number" id="anoLancamento">
+                        <label>Ano</label> 
+                        <input type="number" id="anoLancamento">
                     </div>
                     <div style="flex:1">
-                        <label>Marca</label> <input type="text" id="marca">
+                        <label>Marca</label> 
+                        <input type="text" id="marca">
                     </div>
                 </div>
 				
                 <label>Opinião</label> 
-                <input type="text" id="produto" required>
+                <input type="text" id="opiniao" required>
 
                 <label>URL da Capa</label> 
                 <input type="text" id="urlCapa">

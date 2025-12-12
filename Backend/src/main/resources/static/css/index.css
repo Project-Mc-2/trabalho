@@ -1,103 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,
 body {
-    height: 100%;
-    font-family: "Raleway", sans-serif;
-    color: #ffffff;
-    overflow-x: hidden;
+    background-color: #2c1e1a;
+    overflow: hidden;
 }
 
-.oi {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
+.fotos {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
 }
 
-.oi img {
+.imagem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(50%);
 }
 
-section {
-    padding: 130px 20px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    text-align: center;
-}
-
-#inicio h1 {
-    font-family: 'Licorice', cursive;
-    font-size: 70px;
-    text-shadow: 0 0 5px rgba(157, 132, 132, 0.8);
-}
-
-#inicio p {
-    max-width: 700px;
-    text-shadow: 0 0 5px rgba(87, 61, 18, 0.6);
-    font-size: 25px;
-}
-
-#categorias {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.fotoescura {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.45);
-    border-radius: 20px;
-    color: #211f28;
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+}
+
+#glorious {
+    font-size: 80px;
+    font-family: "Birthstone Bounce", cursive;
+    text-shadow: 0px 0px 15px black;
+}
+
+.descricao {
+    margin-top: 10px;
+    font-family: "Raleway", sans-serif;
+     margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.botoes {
+    margin-top: 25px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 32px;
+    margin: 10px;
+    background-color: #5A3E32;
+    color: #e6cdbb;
     text-decoration: none;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-    backdrop-filter: blur(6px);
-    width: 200px;      
-    height: 90px;   
+    border-radius: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    transition: 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
 
-.card:hover {
-    background: rgba(255, 255, 255, 0.35);
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.4);
-}
-
-@media (max-width: 768px) {
-    .login {
-        width: 38px;
-        height: 38px;
-    }
-
-    .card {
-        width: 180px;
-        height: 95px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 12px 20px;
-    }
-
-    .card {
-        width: 150px;
-        height: 90px;
-        font-size: .95rem;
-    }
+.botao:hover {
+    background-color: #7b5647;
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.35);
 }
