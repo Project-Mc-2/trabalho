@@ -19,7 +19,6 @@ async function listarProduto() {
         if (idCategoria) {
             produtosFiltrados = produtos.filter(p => p.categoria && p.categoria.id == idCategoria);
         }
-        // mudando produtos
 
         if (produtosFiltrados.length === 0) {
             lista.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #666;">
@@ -28,7 +27,6 @@ async function listarProduto() {
             return;
         }
 
-        // Criar HTML dos produtos
         let html = produtosFiltrados.map(f => `
             <div class="produto-card">
                 <div class="acoes-produto">

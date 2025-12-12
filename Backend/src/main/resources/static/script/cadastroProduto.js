@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("formCadastro").addEventListener("submit", salvarProduto);
 });
 
-// Carregar categorias no select
 async function carregarCategorias() {
     try {
         const res = await fetch(CAT_URL);
@@ -33,7 +32,6 @@ async function carregarCategorias() {
     }
 }
 
-// Carregar dados de um produto para edição
 async function carregarDadosProduto(id) {
     try {
         const res = await fetch(`${API_URL}/${id}`);
@@ -56,7 +54,6 @@ async function carregarDadosProduto(id) {
     }
 }
 
-// Salvar ou atualizar produto
 async function salvarProduto(event) {
     event.preventDefault();
 
