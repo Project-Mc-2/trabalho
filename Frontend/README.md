@@ -16,31 +16,29 @@
 **FrontEnd:** (JavaScript), (HTML), (CSS). <br>
 
 # Tabela de EndPoints
-**✉️ Posts**
 | Método | Endpoint | Descrição |
 |--------|----------|-----------|
-| GET    | `/posts` | Lista todos os posts |
-| POST   | `/posts` | Cria um novo post |
-| PUT    | `/posts/{id}` | Atualiza um post existente |
-| DELETE | `/posts/{id}` | Exclui um post |
-
-**⭐ Avaliações (Reviews)**
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| GET    | `/posts/{id}/reviews` | Lista todas as avaliações de um post |
-| POST   | `/posts/{id}/reviews` | Cria uma nova avaliação para um post |
-| PUT    | `/reviews/{id}` | Atualiza uma avaliação existente |
-| DELETE | `/reviews/{id}` | Remove uma avaliação |
+| GET    | /posts/produtos | Lista todos os posts |
+| POST   | /posts/produtos | Cria um novo post |
+| PUT    | /posts/produtos/3 | Atualiza um post existente |
+| DELETE | /posts/produtos/3 | produtosExclui um post |
 
 # Estrutura JSON de entrada e saída
+POST resposta: {
+  "nomeProduto": "Blush Cloud Crush",
+  "anoLancamento": 2023,
+  "marca": "Too Faced",
+  "opiniao": "ghjk",
+  "urlCapa": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRHLk-IdgxOR6pE0OUDuaPMkMB3xk4rofhNNRmCKZyr3S5IZMr6rbIC59M2xiXH0mBttBhBboU9i_aHwKy5-IfmbL7Ar0KsgXzYtKe3OXT-Lr6DNTl30rbw"
+}
+ 
+# Como rodar localmente 
+Instale Spring, GitHub, Vscode
+Baixe as pastas
+Abra as pastas de acordo com o programa.
 
-
-# Exemplos de requisição e respostas
-
-
-# Como rodar localmente
-
-
-# 🗣️ Acesse nosso trello!
+# 🗣️ Acesse nosso Trello!
 **Link**: https://trello.com/b/4Dlu2C58/project-mc
 
+# 📝 Acesse nosso Figma!
+**Link**: https://trello.com/b/4Dlu2C58/project-mc
