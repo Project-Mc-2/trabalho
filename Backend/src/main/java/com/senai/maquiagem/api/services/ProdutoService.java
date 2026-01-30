@@ -35,6 +35,10 @@ public class ProdutoService {
 		f.setOpiniao(dados.getOpiniao());
 		f.setUrlCapa(dados.getUrlCapa());
 		f.setCategoria(dados.getCategoria());
+		
+		// Adicionado conforme solicitado
+		f.setPreco(dados.getPreco());
+		f.setAvaliacao(dados.getAvaliacao());
 
 		return repositorio.save(f);
 	}

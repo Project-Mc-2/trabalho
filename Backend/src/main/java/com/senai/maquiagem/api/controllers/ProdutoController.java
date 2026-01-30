@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.*;
 import com.senai.maquiagem.api.entities.Produto;
 import com.senai.maquiagem.api.services.ProdutoService;
 
+// Importação necessária para validar o preço e a avaliação
+import jakarta.validation.Valid; 
+
 @RestController
 @RequestMapping("/api/produtos")
 @CrossOrigin(origins = "*")
@@ -25,12 +28,12 @@ public class ProdutoController {
 	}
 
 	@PostMapping
-	public Produto salvar(@RequestBody Produto produto) {
+	public Produto salvar(@RequestBody @Valid Produto produto) {
 		return servico.salvar(produto);
 	}
 
 	@PutMapping("/{id}")
-	public Produto atualizar(@PathVariable Long id, @RequestBody Produto dados) {
+	public Produto atualizar(@PathVariable Long id, @RequestBody @Valid Produto dados) {
 		return servico.atualizar(id, dados);
 	}
 

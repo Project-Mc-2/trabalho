@@ -1,5 +1,7 @@
 package com.senai.maquiagem.api.entities;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,8 +10,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
 
 @Entity
 	@Table(name = "tb_produtos")
@@ -31,18 +36,28 @@ import jakarta.validation.constraints.NotBlank;
 		@NotBlank(message = "Sua opinião sobre o produto é obrigatório")
 		@Column(nullable = false)
 		private String opiniao;
+		
+		@NotNull(message = "O preço é obrigatório")
+	    @PositiveOrZero(message = "O preço não pode ser negativo")
+	    private BigDecimal preco;
 
+	    @Min(value = 1, message = "A avaliação deve ser no mínimo 1")
+	    @Max(value = 5, message = "A avaliação deve ser no máximo 5")
+	    private Integer avaliacao;
+		
+		
 		@Column(name = "url_capa") 
 		private String urlCapa;
 
 		@ManyToOne
 		@JoinColumn(name = "categoria_id")
 		private Categoria categoria;
+		
 
 		public Produto() {
 		}
 
-		public Produto(Long id, String nomeProduto, Integer anoLancamento, String marca, String opiniao, String urlCapa, Categoria categoria) {
+		public Produto(Long id, String nomeProduto, Integer anoLancamento, String marca, String opiniao, String urlCapa, Categoria categoria, @NotNull(message = "O preço é obrigatório") @PositiveOrZero(message = "O preço não pode ser negativo") BigDecimal preco, @Min(value = 1, message = "A avaliação deve ser no mínimo 1") @Max(value = 5, message = "A avaliação deve ser no máximo 5") Integer avaliacao) {
 			this.id = id;
 			this.nomeProduto = nomeProduto;
 			this.anoLancamento = anoLancamento;
@@ -50,6 +65,24 @@ import jakarta.validation.constraints.NotBlank;
 			this.opiniao = opiniao;
 			this.urlCapa = urlCapa;
 			this.categoria = categoria;
+			this.avaliacao = avaliacao;
+			this.preco = preco;
+		}
+
+		public BigDecimal getPreco() {
+			return preco;
+		}
+
+		public void setPreco(BigDecimal preco) {
+			this.preco = preco;
+		}
+
+		public Integer getAvaliacao() {
+			return avaliacao;
+		}
+
+		public void setAvaliacao(Integer avaliacao) {
+			this.avaliacao = avaliacao;
 		}
 
 		public Long getId() {
