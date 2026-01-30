@@ -4,13 +4,37 @@
     <meta charset="utf-8">
     <title>Novo Gênero</title>
     <link rel="stylesheet" href="../css/cadastrogenero.css"> 
+    <style>
+        /* Estilo do botão de voltar/título */
+        .link-voltar {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            transition: transform 0.2s, color 0.2s;
+            margin-bottom: 20px; /* Espaço entre o título e o formulário */
+        }
+
+        .link-voltar:hover h2 {
+            transform: translateX(-5px); 
+            color: #d4a373; 
+            cursor: pointer;
+        }
+        
+        .link-voltar h2 {
+            margin: 0;
+            font-size: 2.2rem; /* AUMENTEI O TAMANHO AQUI */
+        }
+    </style>
 </head>
 <body>
     
-
     <div class="formulario">
         <div class="form">
-            <h2>Nova Categoria</h2>
+            
+            <a href="categoria.html" class="link-voltar" title="Voltar para a lista">
+                <h2>Nova Categoria</h2>
+            </a>
+
             <form id="formCategoria">
                 <label>Nome da Categoria</label>
                 <input type="text" id="nomeCategoria" required placeholder="Ex: Batom, Blush ...">
