@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Cadastro Produto</title>
+    <title>Cadastro Produto - Glorious</title>
     <link rel="stylesheet" href="../css/cadastroproduto.css">
 </head>
 <body>
@@ -36,12 +36,23 @@
                         <input type="text" id="marca">
                     </div>
                 </div>
-				
+
+                <div style="display: flex; gap: 10px;">
+                    <div style="flex:1">
+                        <label>Preço (R$)</label> 
+                        <input type="number" id="preco" step="0.01" placeholder="0.00" required>
+                    </div>
+                    <div style="flex:1">
+                        <label>Avaliação (1 a 5)</label> 
+                        <input type="number" id="avaliacao" min="1" max="5" placeholder="5" required>
+                    </div>
+                </div>
+                
                 <label>Opinião</label> 
                 <input type="text" id="opiniao" required>
 
                 <label>URL da Capa</label> 
-                <input type="text" id="urlCapa">
+                <input type="text" id="urlCapa" placeholder="https://...">
 
                 <div class="linha-acoes">
                     <button type="submit" id="btnSalvar" class="btn primario">Salvar Produto</button>

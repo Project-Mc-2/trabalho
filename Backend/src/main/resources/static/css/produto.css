@@ -8,10 +8,9 @@
 }
 
 body {
-    background-color: #ae8e62;
-    color: #4b3f2f;
+    background-color: #3d2f1b;
+    color: #4f463a;
     line-height: 1.6;
-
 }
 
 .barra {
@@ -48,32 +47,6 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18);
 }
 
-
-@media (max-width: 600px) {
-    .barra-topo {
-        flex-direction: column;
-        gap: 15px;
-        padding: 25px;
-    }
-
-    .logo a {
-        font-size: 48px;
-    }
-
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    .logo a {
-        font-size: 56px;
-    }
-}
-
-@media (min-width: 1025px) {
-    .logo a {
-        font-size: 64px;
-    }
-}
-
 #listaProduto {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -90,12 +63,14 @@ body {
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
     font-family: 'Raleway', sans-serif;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .produto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .produto-card img {
@@ -113,6 +88,40 @@ body {
     margin-bottom: 5px;
 }
 
+/* --- NOVOS ESTILOS PARA PREÇO E AVALIAÇÃO --- */
+.detalhes-extras {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.preco {
+    display: block;
+    font-weight: bold;
+    color: #362121;
+    font-size: 1.2em;
+}
+
+.estrelas {
+    color: #b8860b; /* Dourado escuro */
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.opiniao {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: #4b3f2f;
+}
+/* ------------------------------------------- */
+
+.acoes-produto {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
 .acoes-produto button {
     border: none;
     background-color: #362121; 
@@ -121,5 +130,3 @@ body {
     border-radius: 8px;
     cursor: pointer;
 }
-
-

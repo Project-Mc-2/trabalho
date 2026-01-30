@@ -43,6 +43,10 @@ async function carregarDadosProduto(id) {
         document.getElementById("marca").value = produto.marca || "";
         document.getElementById("opiniao").value = produto.opiniao || "";
         document.getElementById("urlCapa").value = produto.urlCapa || "";
+        
+        // Novos campos
+        document.getElementById("preco").value = produto.preco || "";
+        document.getElementById("avaliacao").value = produto.avaliacao || "";
 
         if (produto.categoria) {
             document.getElementById("selectCategoria").value = produto.categoria.id;
@@ -63,6 +67,9 @@ async function salvarProduto(event) {
         marca: document.getElementById("marca").value,
         opiniao: document.getElementById("opiniao").value,
         urlCapa: document.getElementById("urlCapa").value,
+        // Novos campos
+        preco: document.getElementById("preco").value,
+        avaliacao: document.getElementById("avaliacao").value,
         categoria: {
             id: Number(document.getElementById("selectCategoria").value)
         }

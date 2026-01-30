@@ -27,7 +27,17 @@ async function listarProduto() {
             return;
         }
 
-        let html = produtosFiltrados.map(f => `
+        let html = produtosFiltrados.map(f => {
+            // Formatar Preço
+            const precoFormatado = f.preco 
+                ? parseFloat(f.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) 
+                : 'Preço não inf.';
+
+            // Formatar Estrelas
+            const nota = f.avaliacao || 0;
+            const estrelas = '★'.repeat(nota) + '☆'.repeat(5 - nota);
+
+            return `
             <div class="produto-card">
                 <div class="acoes-produto">
                     <button class="btn-editar" onclick="editarProduto(${f.id})">✏️</button>
@@ -36,11 +46,21 @@ async function listarProduto() {
                 <img src="${f.urlCapa || 'https://via.placeholder.com/300x450?text=Sem+Capa'}" 
                      alt="${f.nomeProduto}" 
                      onerror="this.src='https://via.placeholder.com/300x450?text=Sem+Capa'">
+                
                 <strong>${f.nomeProduto}</strong><br>
                 <em>${f.categoria ? f.categoria.nome : "Sem Categoria"}</em><br>
-                (${f.anoLancamento || ""}) - ${f.marca || ""} - ${f.opiniao || ""}
+                
+                <div class="detalhes-extras">
+                    <span class="preco">${precoFormatado}</span>
+                    <span class="estrelas">${estrelas}</span>
+                </div>
+
+                <p style="font-size: 0.9em; margin-top: 5px;">
+                   ${f.anoLancamento || ""} - ${f.marca || ""}
+                </p>
+                <p class="opiniao">"${f.opiniao || ""}"</p>
             </div>
-        `).join("");
+        `}).join("");
 
         lista.innerHTML = html;
 
