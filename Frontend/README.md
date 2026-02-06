@@ -69,7 +69,7 @@ Execute o arquivo index.html (Recomendado usar Live Server).
 
 ## Organização do Projeto
 **Trello:** [Acesse o quadro de tarefas](https://trello.com/b/4Dlu2C58/project-mc)
- **Figma:** [Acesse o protótipo](https://trello.com/b/4Dlu2C58/project-mc)
+ **Figma:** [Acesse o protótipo](https://www.figma.com/design/InQI8hgYw9almc9pRkngv5/Sem-t%C3%ADtulo?node-id=0-1&p=f)
 
 ---
 <p style="color: red;">Desenvolvedores</p>
