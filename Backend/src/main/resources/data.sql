@@ -62,9 +62,6 @@ insert ignore into tb_produtos (id, nome_produto, ano_lancamento, marca, opiniao
 values (7, 'Blush Rosy Glow', 2020, 'Dior', 'Produto que se adapta a todas as cores, muda conforme o pH da pele.', 'https://i.pinimg.com/736x/45/91/ef/4591efc4635fab60e7e72a76f8214871.jpg', 3, 265.50, 5);
 
 insert ignore into tb_produtos (id, nome_produto, ano_lancamento, marca, opiniao, url_capa, categoria_id, preco, avaliacao)
-values (301, 'Orgasm', 1999, 'NARS', 'O blush mais famoso do mundo. Um rosa com dourado lindo.', 'https://i.pinimg.com/564x/st/uv/wx/stuvwxplaceholder.jpg', 3, 230.00, 5);
-
-insert ignore into tb_produtos (id, nome_produto, ano_lancamento, marca, opiniao, url_capa, categoria_id, preco, avaliacao)
 values (302, 'Benetint', 1976, 'Benefit', 'Líquido, serve para boca e bochecha. O efeito é super natural.', 'https://i.pinimg.com/564x/yz/12/34/yz1234placeholder.jpg', 3, 139.00, 4);
 
 insert ignore into tb_produtos (id, nome_produto, ano_lancamento, marca, opiniao, url_capa, categoria_id, preco, avaliacao)
